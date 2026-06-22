@@ -296,8 +296,11 @@ body{font-family:"Aller",sans-serif;font-weight:300;background:#f5f5f5;color:var
     </ul>
   </div>
 
-  <div style="margin-top:6px;padding:9px 12px;border-left:3px solid #E07F5C;background:var(--gris-p);border-radius:0 5px 5px 0">
-    <div style="font-size:9px;font-weight:700;color:var(--slate);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px">Recuadro de Investigación · IPoM Jun 2026</div>
+  <div onclick="openModal('jun')" style="margin-top:6px;padding:9px 12px;border-left:3px solid #E07F5C;background:var(--gris-p);border-radius:0 5px 5px 0;cursor:pointer;transition:background .15s" onmouseenter="this.style.background='#e8e8e8'" onmouseleave="this.style.background='var(--gris-p)'">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div style="font-size:9px;font-weight:700;color:var(--slate);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px">Recuadro de Investigación · IPoM Jun 2026</div>
+      <div style="font-size:10px;color:var(--slate);opacity:.7">ver más ↗</div>
+    </div>
     <div style="font-size:11px;font-weight:300;color:var(--dark);line-height:1.4"><b>Evolución de sectores de recursos naturales</b> (Recuadro I.3). Examina el desempeño reciente de la minería del cobre, la agroindustria y otros sectores de RR.NN., afectados por factores de oferta transitorios durante el 1T. Distingue qué parte del menor crecimiento responde a shocks puntuales y qué parte a tendencias más persistentes, y cuantifica su incidencia en la revisión a la baja de las proyecciones de PIB para 2026.</div>
   </div>
 
@@ -406,8 +409,11 @@ body{font-family:"Aller",sans-serif;font-weight:300;background:#f5f5f5;color:var
     </ul>
   </div>
 
-  <div style="margin-top:6px;padding:9px 12px;border-left:3px solid #E07F5C;background:var(--gris-p);border-radius:0 5px 5px 0">
-    <div style="font-size:9px;font-weight:700;color:var(--slate);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px">Recuadro de Investigación · IPoM Mar 2026</div>
+  <div onclick="openModal('mar')" style="margin-top:6px;padding:9px 12px;border-left:3px solid #E07F5C;background:var(--gris-p);border-radius:0 5px 5px 0;cursor:pointer;transition:background .15s" onmouseenter="this.style.background='#e8e8e8'" onmouseleave="this.style.background='var(--gris-p)'">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div style="font-size:9px;font-weight:700;color:var(--slate);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px">Recuadro de Investigación · IPoM Mar 2026</div>
+      <div style="font-size:10px;color:var(--slate);opacity:.7">ver más ↗</div>
+    </div>
     <div style="font-size:11px;font-weight:300;color:var(--dark);line-height:1.4"><b>Efectos de la guerra en la economía global</b> (Recuadro II.2). Estima el impacto del conflicto en Medio Oriente sobre el crecimiento mundial, los precios de la energía y las condiciones financieras externas.</div>
   </div>
 
@@ -845,6 +851,102 @@ function dlHTML(){
   const h='<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>IPoM Tracker BCCh</title>'+s+'</head><body style="background:#f5f5f5;min-height:100vh;display:flex;justify-content:center;padding:2rem 1rem">'+b+'<div class="tooltip" id="tooltip"></div>'+sc+'</body></html>';
   const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.download='ipom-tracker-bcch.html';a.click();
 }
+</script>
+<!-- ══ MODAL RECUADRO ══ -->
+<div id="rec-modal" onclick="if(event.target===this)closeModal()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:1000;align-items:center;justify-content:center;padding:20px">
+  <div style="background:#fff;border-radius:8px;max-width:620px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:0 8px 32px rgba(0,0,0,.22)">
+    <!-- Header -->
+    <div style="padding:14px 18px 10px;border-bottom:1px solid #e6e6e6;display:flex;justify-content:space-between;align-items:flex-start">
+      <div>
+        <div id="modal-label" style="font-size:9px;font-weight:700;color:#5D7082;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px"></div>
+        <div id="modal-title" style="font-size:14px;font-weight:700;color:#1B2127;line-height:1.3"></div>
+      </div>
+      <button onclick="closeModal()" style="background:none;border:none;font-size:18px;cursor:pointer;color:#5D7082;margin-left:12px;line-height:1">×</button>
+    </div>
+    <!-- Body -->
+    <div style="padding:14px 18px">
+      <div id="modal-body" style="font-size:12px;font-weight:300;color:#1B2127;line-height:1.6;margin-bottom:14px"></div>
+      <div id="modal-chart-wrap" style="width:100%">
+        <canvas id="modal-chart" style="width:100%;height:180px"></canvas>
+        <div id="modal-chart-note" style="font-size:9px;color:#5D7082;margin-top:4px;font-style:italic"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const MODAL_DATA = {
+  jun: {
+    label: 'Recuadro I.3 · IPoM Junio 2026',
+    title: 'Evolución de sectores de recursos naturales',
+    body: `El Recuadro I.3 del IPoM Jun 2026 analiza el desempeño de los sectores de recursos naturales (RR.NN.) durante el primer trimestre de 2026, período marcado por shocks de oferta transitorios que impactaron negativamente el crecimiento del PIB.<br><br>
+La <b>minería del cobre</b> registró una caída significativa por problemas operativos en faenas de gran escala, mientras que la <b>agroindustria</b> enfrentó condiciones climáticas adversas. El análisis distingue entre efectos puntuales (ya revertidos o en proceso) y tendencias más persistentes ligadas a la productividad del sector.<br><br>
+El recuadro estima que los shocks transitorios explican aproximadamente <b>0,6–0,8 pp</b> de la revisión a la baja en las proyecciones de PIB 2026, de un total de ~1 pp de ajuste. La parte restante refleja una recuperación algo más lenta de la demanda interna y el consumo privado.`,
+    chartNote: 'Contribución estimada al ajuste de proyección PIB 2026 (pp). Fuente: BCCh IPoM Jun 2026, Recuadro I.3.',
+    chartData: {
+      labels: ['Minería cobre', 'Agroindustria', 'Otros RR.NN.', 'Demanda interna'],
+      values: [-0.45, -0.20, -0.15, -0.20],
+      colors: ['#5D7082','#5D7082','#5D7082','#B5C1CB']
+    }
+  },
+  mar: {
+    label: 'Recuadro II.2 · IPoM Marzo 2026',
+    title: 'Efectos de la guerra en la economía global',
+    body: `El Recuadro II.2 del IPoM Mar 2026 cuantifica el impacto macroeconómico del conflicto en Medio Oriente sobre la economía global y sus canales de transmisión hacia Chile.<br><br>
+El análisis identifica tres canales principales: (i) <b>precios de energía</b>, con el petróleo manteniéndose elevado por incertidumbre geopolítica; (ii) <b>condiciones financieras externas</b>, donde el flight-to-quality comprimió los spreads para economías avanzadas pero elevó el costo de financiamiento para emergentes; y (iii) <b>crecimiento mundial</b>, con una revisión a la baja de ~0,2–0,3 pp para 2026.<br><br>
+Para Chile, el efecto neto es <b>moderadamente negativo</b> vía términos de intercambio y menor demanda externa, parcialmente compensado por el alza del precio del cobre asociada a disrupciones en cadenas de suministro.`,
+    chartNote: 'Impacto estimado sobre variables clave (desviación respecto escenario base). Fuente: BCCh IPoM Mar 2026, Recuadro II.2.',
+    chartData: {
+      labels: ['Crecim. mundial', 'Precio petróleo', 'Cond. financieras', 'PIB Chile'],
+      values: [-0.25, 0.18, -0.15, -0.10],
+      colors: ['#5D7082','#E07F5C','#5D7082','#5D7082']
+    }
+  }
+};
+
+function openModal(key){
+  const d=MODAL_DATA[key];
+  document.getElementById('modal-label').textContent=d.label;
+  document.getElementById('modal-title').innerHTML=d.title;
+  document.getElementById('modal-body').innerHTML=d.body;
+  document.getElementById('modal-chart-note').textContent=d.chartNote;
+  const modal=document.getElementById('rec-modal');
+  modal.style.display='flex';
+  setTimeout(()=>drawModalChart(d.chartData),80);
+}
+function closeModal(){
+  document.getElementById('rec-modal').style.display='none';
+}
+function drawModalChart(data){
+  const cv=document.getElementById('modal-chart');
+  const wr=cv.parentElement;
+  const DPR=window.devicePixelRatio||1,W=wr.offsetWidth,H=180;
+  cv.width=W*DPR;cv.height=H*DPR;cv.style.width=W+'px';cv.style.height=H+'px';
+  const ctx=cv.getContext('2d');ctx.scale(DPR,DPR);
+  const n=data.labels.length,PL=20,PR=20,PT=16,PB=30,cW=W-PL-PR,cH=H-PT-PB;
+  const bW=(cW/n)*.55,gap=(cW/n);
+  const maxV=Math.max(...data.values.map(Math.abs))*1.3||1;
+  const zero=PT+cH/2;
+  ctx.fillStyle='#fff';ctx.fillRect(0,0,W,H);
+  // zero line
+  ctx.strokeStyle='rgba(0,0,0,.2)';ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(PL,zero);ctx.lineTo(PL+cW,zero);ctx.stroke();
+  data.values.forEach((v,i)=>{
+    const x=PL+i*gap+(gap-bW)/2;
+    const bH=Math.abs(v)/maxV*(cH/2);
+    const y=v>=0?zero-bH:zero;
+    ctx.fillStyle=v<0?'#5D7082':'#7BC143';
+    ctx.fillRect(x,y,bW,bH);
+    // value label
+    ctx.fillStyle='#000';ctx.font='bold 9px Arial';ctx.textAlign='center';
+    const lbl=(v>0?'+':'')+v.toFixed(2);
+    ctx.fillText(lbl,x+bW/2,v>=0?y-4:y+bH+10);
+    // x label
+    ctx.fillStyle='#000';ctx.font='9px Arial';
+    ctx.fillText(data.labels[i],x+bW/2,H-6);
+  });
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 </script>
 </body>
 </html>
