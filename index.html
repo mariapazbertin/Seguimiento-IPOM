@@ -36,8 +36,8 @@ body{font-family:"Aller",sans-serif;font-weight:300;background:#f5f5f5;color:var
 .tb{font-weight:300;border-color:var(--gris-l);background:transparent;color:var(--dark)}
 .tb:hover{background:var(--gris-p)}
 .tb.active{background:var(--slate);border-color:var(--slate);color:#fff;font-weight:700}
-.tbg{font-weight:300;border-color:var(--verde-m);background:transparent;color:var(--slate)}
-.tbg:hover{background:var(--verde-p)}
+.tbg{font-weight:300;border-color:var(--verde-l);background:var(--verde-p);color:#5a8a3a}
+.tbg:hover{background:var(--verde-l)}
 .tbg.active{background:var(--verde);border-color:var(--verde);color:#fff;font-weight:700}
 .mp{display:none}.mp.active{display:block}
 
@@ -128,7 +128,8 @@ body{font-family:"Aller",sans-serif;font-weight:300;background:#f5f5f5;color:var
 /* Evolution table */
 .ctb{width:100%;border-collapse:collapse;font-size:12px;font-weight:300;table-layout:fixed}
 .ctb th{text-align:left;padding:6px 10px;color:var(--dark);font-weight:700;border-bottom:2px solid var(--verde);font-size:11px;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
-.ctb td{padding:0 10px;color:var(--dark);font-weight:300;border-bottom:1px solid var(--gris-p);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:30px;line-height:30px;vertical-align:middle}
+.ctb td{padding:0 10px;color:var(--dark);font-weight:300;border-bottom:1px solid var(--gris-p);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:30px;line-height:30px;vertical-align:middle;text-align:center}
+.ctb td.rl2{text-align:left}
 .ctb tr:last-child td{border-bottom:none}
 .ctb .rl2{font-weight:700}
 .ctb tr:nth-child(even) td{background:var(--gris-p)}
@@ -145,8 +146,8 @@ body{font-family:"Aller",sans-serif;font-weight:300;background:#f5f5f5;color:var
 .lb{width:10px;height:10px;border-radius:2px;flex-shrink:0}
 .cnote{font-size:10px;color:var(--slate);margin-top:5px;font-style:italic;font-weight:300}
 /* Corredor inline en panel */
-.corrwrap{width:100%;position:relative;cursor:crosshair;margin-bottom:8px}
-.corrleg{display:flex;gap:14px;margin:6px 0 2px;flex-wrap:wrap;justify-content:center;font-size:11px;color:var(--dark);font-weight:300}
+.corrwrap{width:100%;position:relative;cursor:crosshair;margin-bottom:18px}
+.corrleg{display:flex;gap:14px;margin:14px 0 8px;flex-wrap:wrap;justify-content:center;font-size:11px;color:var(--dark);font-weight:300}
 .corrleg .li{display:flex;align-items:center;gap:5px}
 .swb{width:14px;height:10px;border-radius:2px;flex-shrink:0}
 /* Caja de sesgo de la reunión */
@@ -157,7 +158,7 @@ body{font-family:"Aller",sans-serif;font-weight:300;background:#f5f5f5;color:var
 
 /* Lista compacta de niveles del corredor */
 .cor1{background:var(--gris-p);border-radius:5px;overflow:hidden}
-.cor1r{display:grid;grid-template-columns:165px 1fr;gap:10px;padding:7px 12px;border-bottom:1px solid #d8d8d8;align-items:baseline}
+.cor1r{display:grid;grid-template-columns:165px 1fr;gap:10px;padding:12px 12px;border-bottom:1px solid #d8d8d8;align-items:baseline}
 .cor1r:last-child{border-bottom:none}
 .cor1l{font-size:11px;font-weight:700;color:var(--dark)}
 .cor1d{font-size:11px;font-weight:300;color:var(--dark);line-height:1.35}
@@ -165,7 +166,7 @@ body{font-family:"Aller",sans-serif;font-weight:300;background:#f5f5f5;color:var
 
 /* Color helpers */
 .ac{color:var(--naranja)}.ag{color:var(--verde)}
-.ctb td.dlt{font-size:13px;font-weight:900;text-align:center;line-height:1;font-variant-emoji:text}
+.ctb td.dlt{font-size:14px;font-weight:400;text-align:center;line-height:1;font-variant-emoji:text}
 .ctb td.dlt.ac{color:var(--naranja)}
 .ctb td.dlt.ag{color:var(--verde)}
 .ctb td.dlt.eq{color:var(--gris-l)}
@@ -183,6 +184,7 @@ body{font-family:"Aller",sans-serif;font-weight:300;background:#f5f5f5;color:var
     <h2>IPoM Tracker — Banco Central de Chile</h2>
     <div class="sub">Informe de Política Monetaria · Actualizado: Jun 2026</div>
   </div>
+  <div style="font-size:10px;font-weight:700;color:#5D7082;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap;flex-shrink:0">Información Pública</div>
 </div>
 
 <div class="tabs">
@@ -206,62 +208,21 @@ body{font-family:"Aller",sans-serif;font-weight:300;background:#f5f5f5;color:var
       <div class="datt">Datos a la fecha del IPoM</div>
       <div class="datg">
         <div class="mc" style="background:var(--gris-p)"><div class="ml">IPC (May 2026)</div><div class="mv">3,9%</div><div class="ms">Subyacente: 3,2%</div></div>
-        <div class="mc" style="background:var(--gris-p)"><div class="ml">PIB 2026 (f)</div><div class="mv">1,0–1,75%</div><div class="ms">Rango proy.</div></div>
+        <div class="mc" style="background:var(--gris-p)"><div class="ml">PIB 2026 (Proyección)</div><div class="mv">1,0–1,75%</div><div class="ms">Rango proy.</div></div>
         <div class="mc" style="background:var(--gris-p)"><div class="ml">Desempleo (Abr)</div><div class="mv">9,1%</div><div class="ms">Al alza</div></div>
-        <div class="mc" style="background:var(--gris-p)"><div class="ml">Cobre 2026(f)</div><div class="mv">US$5,8</div><div class="ms">/libra prom.</div></div>
+        <div class="mc" style="background:var(--gris-p)"><div class="ml">Cobre 2026 (Proyección)</div><div class="mv">US$5,8</div><div class="ms">/libra prom.</div></div>
       </div>
     </div>
   </div>
 
   <div class="sgbox">
     <span class="sgl">Sesgo Política Monetaria</span>
-    <span class="sgv"><b>Balance de riesgos equilibrándose.</b> La TPM se evalúa Reunión a Reunión.</span>
+    <span class="sgv"><b>Balance de riesgos equilibrándose.</b></span>
   </div>
 
-  <!-- CUADRO 1 -->
-  <div class="sec">
-    <div class="st">Datos Macroeconómicos Clave</div>
-    <div class="kvb">
-      <div class="kvr">
-        <div><div class="kvt">TPM — Sesgo</div><div class="kvv">Neutral</div></div>
-        <div class="kvn">Sin trayectoria comprometida. El balance de riesgos se ha ido equilibrando; se evalúa cada RPM por separado.</div>
-      </div>
-      <div class="kvr">
-        <div><div class="kvt">Inflación proyectada</div><div class="kvv ac">4,2% dic 2026</div></div>
-        <div class="kvn">Shock de combustibles (Ormuz): IPC sube a 3,9% en mayo. Dic 2026 a 4,2% (4,0% mar), retorna a 3% en Q2 2027. Subyacente sin cambios.</div>
-      </div>
-      <div class="kvr">
-        <div><div class="kvt">PIB 2026 (rango)</div><div class="kvv ac">1,0 – 1,75%</div></div>
-        <div class="kvn">A la baja (1,5–2,5% mar) por la sorpresa negativa del 1T: minería del cobre y RR.NN. Shocks de oferta transitorios, salvo minería.</div>
-      </div>
-      <div class="kvr">
-        <div><div class="kvt">Mercado laboral</div><div class="kvv ac">Debilitándose</div></div>
-        <div class="kvn">Desempleo sube a 9,1% (8,3% ene). Débil empleo, paso de formal a informal y salarios reales a la baja debilitan el consumo.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CUADRO 2 -->
-  <div class="sec">
-    <div class="st">Demanda Interna · Inversión · Sector Externo</div>
-    <div class="kvb">
-      <div class="kvr">
-        <div><div class="kvt">Consumo privado</div><div class="kvv ac">Moderándose</div></div>
-        <div class="kvn">Crece 1,8% 2026 (2,2% mar) por fundamentos débiles; el mayor gasto público lo compensa (demanda interna 2,2%).</div>
-      </div>
-      <div class="kvr">
-        <div><div class="kvt">Gasto fiscal</div><div class="kvv ac">+1,2pp PIB vs mar</div></div>
-        <div class="kvn">Supuesto fiscal +1,2pp del PIB vs marzo (gastos comprometidos, IFP 1T). Sostiene la demanda interna.</div>
-      </div>
-      <div class="kvr">
-        <div><div class="kvt">Inversión (FBCF)</div><div class="kvv ac">+2,2% 2026(f)</div></div>
-        <div class="kvn">Recortada (4,0% mar) por la caída del 1T. Pero el mediano plazo mejora: catastro CBC +33% lleva la FBCF a 5,0% en 2027.</div>
-      </div>
-      <div class="kvr">
-        <div><div class="kvt">Sector externo</div><div class="kvv ag">CC −1,4% PIB 2026(f)</div></div>
-        <div class="kvn">Mejor que −1,7% mar. Cobre US$5,8/lb y mejores términos de intercambio (4,2%) reducen el déficit, junto a menores importaciones.</div>
-      </div>
-    </div>
+  <div class="sec"><div class="st">Cita Clave</div>
+    <div class="qb">El Consejo estima que el <b>balance de riesgos para la inflación se ha ido equilibrando</b>, aunque el escenario macroeconómico sigue sujeto a un grado de incertidumbre mayor al habitual. De este modo, la <b>evolución futura de la TPM irá evaluándose Reunión a Reunión</b> en función del desarrollo de los acontecimientos.</div>
+    <div class="qa">— Consejo del Banco Central de Chile, IPoM Junio 2026</div>
   </div>
 
   <div class="sec"><div class="st">Corredor de TPM (IPoM Jun 2026)</div>
@@ -280,13 +241,52 @@ body{font-family:"Aller",sans-serif;font-weight:300;background:#f5f5f5;color:var
       <div class="cor1r"><span class="cor1l">Banda superior · restrictiva</span><span class="cor1d">Borde alto: TPM más alta si la inflación es mayor y más persistente que lo previsto.</span></div>
       <div class="cor1r"><span class="cor1l">Banda inferior · expansiva</span><span class="cor1d">Borde bajo: TPM más baja ante un deterioro más marcado de la demanda local.</span></div>
       <div class="cor1r"><span class="cor1l">Puntos (EEE/EOF/Forward)</span><span class="cor1d">Expectativas de mercado sobre la TPM futura, en torno a 4–4,5% en el horizonte.</span></div>
-      <div class="cor1r"><span class="cor1l">En este IPoM</span><span class="cor1d">Límites similares a marzo; el balance de riesgos para la inflación se ha ido equilibrando.</span></div>
+      <div class="cor1r"><span class="cor1l">En este IPoM</span><span class="cor1d">Límites similares a marzo, el balance de riesgos para la inflación se fue equilibrando.</span></div>
+    </div>
+  </div>
+
+  <!-- CUADRO 1 -->
+  <div class="sec">
+    <div class="st">Datos Macroeconómicos Clave</div>
+    <div class="kvb">
+      <div class="kvr">
+        <div><div class="kvt">TPM — Sesgo</div><div class="kvv">Neutral</div></div>
+        <div class="kvn">Sin trayectoria comprometida. El balance de riesgos se equilibró y se evaluará cada RPM por separado.</div>
+      </div>
+      <div class="kvr">
+        <div><div class="kvt">Inflación proyectada</div><div class="kvv ac">4,2% dic 2026</div></div>
+        <div class="kvn">El shock de combustibles (Ormuz) llevó el IPC a 3,9% en mayo. Se proyectó 4,2% a dic 2026 (4,0% mar) y retorno al 3% en 2027.</div>
+      </div>
+      <div class="kvr">
+        <div><div class="kvt">PIB 2026 (rango)</div><div class="kvv ac">1,0 – 1,75%</div></div>
+        <div class="kvn">Revisado a la baja (1,5–2,5% mar) por la débil minería del cobre en el 1T. Los shocks de oferta se vieron transitorios, salvo minería.</div>
+      </div>
+      <div class="kvr">
+        <div><div class="kvt">Mercado laboral</div><div class="kvv ac">Debilitándose</div></div>
+        <div class="kvn">El desempleo subió a 9,1% (8,3% ene). El empleo débil, la informalidad y los salarios reales a la baja golpearon el consumo.</div>
+      </div>
+      <div class="kvr">
+        <div><div class="kvt">Consumo privado</div><div class="kvv ac">Moderándose</div></div>
+        <div class="kvn">Se proyectó un crecimiento de 1,8% en 2026 (2,2% mar) por fundamentos débiles, compensado por el mayor gasto público.</div>
+      </div>
+      <div class="kvr">
+        <div><div class="kvt">Gasto fiscal</div><div class="kvv ac">+1,2pp PIB vs mar</div></div>
+        <div class="kvn">El supuesto fiscal subió +1,2pp del PIB vs marzo (gastos comprometidos, IFP 1T), sosteniendo la demanda interna.</div>
+      </div>
+      <div class="kvr">
+        <div><div class="kvt">Inversión (FBCF)</div><div class="kvv ac">+2,2% 2026(f)</div></div>
+        <div class="kvn">Recortada (4,0% mar) por la caída del 1T, pero mejora a mediano plazo: el catastro CBC (+33%) la lleva a 5,0% en 2027.</div>
+      </div>
+      <div class="kvr">
+        <div><div class="kvt">Sector externo</div><div class="kvv ag">CC −1,4% PIB 2026(f)</div></div>
+        <div class="kvn">Mejor que −1,7% mar. El cobre a US$5,8/lb y mejores términos de intercambio (4,2%) achican el déficit.</div>
+      </div>
     </div>
   </div>
 
   <div class="sec"><div class="st">Balance de Riesgos</div>
     <ul class="rl">
-      <li class="ri"><span class="rt rh"></span>Conflicto Medio Oriente sin resolución; oferta de petróleo no normalizada</li>
+      <li class="ri"><span class="rt rh"></span>Conflicto Medio Oriente sin resolución, oferta de petróleo no normalizada</li>
       <li class="ri"><span class="rt rh"></span>Salto no lineal del precio del crudo si los inventarios entran en zona de estrés</li>
       <li class="ri"><span class="rt rm"></span>Inflación más persistente si el shock de costos se propaga sobre lo previsto</li>
       <li class="ri"><span class="rt rm"></span>Fundamentos del consumo de los hogares más débiles</li>
@@ -296,9 +296,9 @@ body{font-family:"Aller",sans-serif;font-weight:300;background:#f5f5f5;color:var
     </ul>
   </div>
 
-  <div class="sec"><div class="st">Cita Clave</div>
-    <div class="qb">El Consejo estima que el <b>balance de riesgos para la inflación se ha ido equilibrando</b>, aunque el escenario macroeconómico sigue sujeto a un grado de incertidumbre mayor al habitual. De este modo, la <b>evolución futura de la TPM irá evaluándose Reunión a Reunión</b> en función del desarrollo de los acontecimientos.</div>
-    <div class="qa">— Consejo del Banco Central de Chile, IPoM Junio 2026</div>
+  <div style="margin-top:6px;padding:9px 12px;border-left:3px solid #E07F5C;background:var(--gris-p);border-radius:0 5px 5px 0">
+    <div style="font-size:9px;font-weight:700;color:var(--slate);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px">Recuadro de Investigación · IPoM Jun 2026</div>
+    <div style="font-size:11px;font-weight:300;color:var(--dark);line-height:1.4"><b>Evolución de sectores de recursos naturales</b> (Recuadro I.3). Examina el desempeño reciente de la minería del cobre, la agroindustria y otros sectores de RR.NN., afectados por factores de oferta transitorios durante el 1T. Distingue qué parte del menor crecimiento responde a shocks puntuales y qué parte a tendencias más persistentes, y cuantifica su incidencia en la revisión a la baja de las proyecciones de PIB para 2026.</div>
   </div>
 
 </div>
@@ -318,62 +318,21 @@ body{font-family:"Aller",sans-serif;font-weight:300;background:#f5f5f5;color:var
       <div class="datt">Datos a la fecha del IPoM</div>
       <div class="datg">
         <div class="mc" style="background:var(--gris-p)"><div class="ml">IPC (Feb 2026)</div><div class="mv">2,4%</div><div class="ms">Subyacente: 3,3%</div></div>
-        <div class="mc" style="background:var(--gris-p)"><div class="ml">PIB 2026 (f)</div><div class="mv">1,5–2,5%</div><div class="ms">Rango proy.</div></div>
+        <div class="mc" style="background:var(--gris-p)"><div class="ml">PIB 2026 (Proyección)</div><div class="mv">1,5–2,5%</div><div class="ms">Rango proy.</div></div>
         <div class="mc" style="background:var(--gris-p)"><div class="ml">Desempleo (Ene)</div><div class="mv">8,3%</div><div class="ms">Sin cambios</div></div>
-        <div class="mc" style="background:var(--gris-p)"><div class="ml">Cobre 2026(f)</div><div class="mv">US$5,4</div><div class="ms">/libra prom.</div></div>
+        <div class="mc" style="background:var(--gris-p)"><div class="ml">Cobre 2026 (Proyección)</div><div class="mv">US$5,4</div><div class="ms">/libra prom.</div></div>
       </div>
     </div>
   </div>
 
   <div class="sgbox">
     <span class="sgl">Sesgo Política Monetaria</span>
-    <span class="sgv"><b>Guerra en Medio Oriente.</b> Sin trayectoria comprometida; se evalúa reunión a reunión.</span>
+    <span class="sgv"><b>Guerra en Medio Oriente.</b> Sin trayectoria comprometida, se evalúa reunión a reunión.</span>
   </div>
 
-  <!-- CUADRO 1 -->
-  <div class="sec">
-    <div class="st">Datos Macroeconómicos Clave</div>
-    <div class="kvb">
-      <div class="kvr">
-        <div><div class="kvt">TPM — Sesgo</div><div class="kvv">Neutral</div></div>
-        <div class="kvn">Sin movimientos comprometidos. La guerra obliga a evaluar cada RPM por separado antes de converger al neutro (~4,25%).</div>
-      </div>
-      <div class="kvr">
-        <div><div class="kvt">Inflación proyectada</div><div class="kvv ac">~4% dic 2026</div></div>
-        <div class="kvn">Dic–feb sorprendió a la baja, pero la guerra sube combustibles: IPC dic 2026 a 4,0% (3,2% dic), vuelve a 3% en Q2 2027. Subyacente 3,3%.</div>
-      </div>
-      <div class="kvr">
-        <div><div class="kvt">PIB 2026 (rango)</div><div class="kvv ac">1,5 – 2,5%</div></div>
-        <div class="kvn">A la baja vs diciembre: guerra en Medio Oriente, ajuste fiscal de −US$3.800 mn y debilidad de la minería limitan el crecimiento.</div>
-      </div>
-      <div class="kvr">
-        <div><div class="kvt">Mercado laboral</div><div class="kvv">Estable / Alto</div></div>
-        <div class="kvn">Desempleo 8,3%. Masa salarial real crece liderada por salarios, no por empleo. Sin deterioro, pero sin dinamismo.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CUADRO 2 -->
-  <div class="sec">
-    <div class="st">Demanda Interna · Inversión · Sector Externo</div>
-    <div class="kvb">
-      <div class="kvr">
-        <div><div class="kvt">Consumo privado</div><div class="kvv">Resistente</div></div>
-        <div class="kvn">El privado resiste, pero el consumo total se recorta a 1,8% (2,7% dic) y la demanda interna a 2,4% por el menor gasto público.</div>
-      </div>
-      <div class="kvr">
-        <div><div class="kvt">Masa salarial real</div><div class="kvv ag">Creciendo ~6%</div></div>
-        <div class="kvn">Principal soporte del consumo: crecen los salarios, no el empleo. La creación de puestos permanece acotada.</div>
-      </div>
-      <div class="kvr">
-        <div><div class="kvt">Inversión (FBCF)</div><div class="kvv">+4,0% 2026(f)</div></div>
-        <div class="kvn">Principal motor: maquinaria y equipos en minería y energía. Construcción sigue rezagada.</div>
-      </div>
-      <div class="kvr">
-        <div><div class="kvt">Sector externo</div><div class="kvv ag">CC −1,7% PIB 2026(f)</div></div>
-        <div class="kvn">Mejor que −2,2% dic. Cobre US$5,4/lb compensa el alza del petróleo; términos de intercambio se recortan a 2,6%.</div>
-      </div>
-    </div>
+  <div class="sec"><div class="st">Cita Clave</div>
+    <div class="qb">La evolución futura de la <b>Tasa de Política Monetaria irá evaluándose Reunión a Reunión</b> en función del desarrollo de los acontecimientos. El punto de partida de la economía chilena, con una <b>brecha prácticamente cerrada, una inflación baja</b> y expectativas en torno a la meta, <b>permite enfrentar de mejor manera los desafíos del incierto escenario</b>.</div>
+    <div class="qa">— Consejo del Banco Central de Chile, IPoM Marzo 2026</div>
   </div>
 
   <div class="sec"><div class="st">Corredor de TPM (IPoM Mar 2026)</div>
@@ -396,6 +355,45 @@ body{font-family:"Aller",sans-serif;font-weight:300;background:#f5f5f5;color:var
     </div>
   </div>
 
+  <!-- CUADRO 1 -->
+  <div class="sec">
+    <div class="st">Datos Macroeconómicos Clave</div>
+    <div class="kvb">
+      <div class="kvr">
+        <div><div class="kvt">TPM — Sesgo</div><div class="kvv">Neutral</div></div>
+        <div class="kvn">Sin movimientos comprometidos. La guerra obligó a evaluar cada RPM por separado antes de converger al neutro (~4,25%).</div>
+      </div>
+      <div class="kvr">
+        <div><div class="kvt">Inflación proyectada</div><div class="kvv ac">~4% dic 2026</div></div>
+        <div class="kvn">El IPC sorprendió a la baja, pero la guerra elevó combustibles. Se proyectó 4,0% a dic 2026 (3,2% dic) y retorno al 3% en 2027.</div>
+      </div>
+      <div class="kvr">
+        <div><div class="kvt">PIB 2026 (rango)</div><div class="kvv ac">1,5 – 2,5%</div></div>
+        <div class="kvn">Revisado a la baja vs diciembre por la guerra, el ajuste fiscal (−US$3.800 mn) y la débil minería.</div>
+      </div>
+      <div class="kvr">
+        <div><div class="kvt">Mercado laboral</div><div class="kvv">Estable / Alto</div></div>
+        <div class="kvn">El desempleo se mantuvo en 8,3%. La masa salarial real creció por salarios, no por empleo: sin deterioro ni dinamismo.</div>
+      </div>
+      <div class="kvr">
+        <div><div class="kvt">Consumo privado</div><div class="kvv">Resistente</div></div>
+        <div class="kvn">El privado resistió, pero el consumo total se recortó a 1,8% (2,7% dic) y la demanda interna a 2,4% por menor gasto público.</div>
+      </div>
+      <div class="kvr">
+        <div><div class="kvt">Masa salarial real</div><div class="kvv ag">Creciendo ~6%</div></div>
+        <div class="kvn">Principal soporte del consumo: crecieron los salarios, no el empleo, con creación de puestos acotada.</div>
+      </div>
+      <div class="kvr">
+        <div><div class="kvt">Inversión (FBCF)</div><div class="kvv">+4,0% 2026(f)</div></div>
+        <div class="kvn">Impulsada por maquinaria y equipos en minería y energía, mientras la construcción siguió rezagada.</div>
+      </div>
+      <div class="kvr">
+        <div><div class="kvt">Sector externo</div><div class="kvv ag">CC −1,7% PIB 2026(f)</div></div>
+        <div class="kvn">Mejor que −2,2% dic. El cobre a US$5,4/lb compensó el alza del petróleo, con términos de intercambio en 2,6%.</div>
+      </div>
+    </div>
+  </div>
+
   <div class="sec"><div class="st">Balance de Riesgos</div>
     <ul class="rl">
       <li class="ri"><span class="rt rh"></span>Guerra Medio Oriente — duración e intensidad inciertas</li>
@@ -408,9 +406,9 @@ body{font-family:"Aller",sans-serif;font-weight:300;background:#f5f5f5;color:var
     </ul>
   </div>
 
-  <div class="sec"><div class="st">Cita Clave</div>
-    <div class="qb">La evolución futura de la <b>Tasa de Política Monetaria irá evaluándose Reunión a Reunión</b> en función del desarrollo de los acontecimientos. El punto de partida de la economía chilena, con una <b>brecha prácticamente cerrada, una inflación baja</b> y expectativas en torno a la meta, <b>permite enfrentar de mejor manera los desafíos del incierto escenario</b>.</div>
-    <div class="qa">— Consejo del Banco Central de Chile, IPoM Marzo 2026</div>
+  <div style="margin-top:6px;padding:9px 12px;border-left:3px solid #E07F5C;background:var(--gris-p);border-radius:0 5px 5px 0">
+    <div style="font-size:9px;font-weight:700;color:var(--slate);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px">Recuadro de Investigación · IPoM Mar 2026</div>
+    <div style="font-size:11px;font-weight:300;color:var(--dark);line-height:1.4"><b>Efectos de la guerra en la economía global</b> (Recuadro II.2). Estima el impacto del conflicto en Medio Oriente sobre el crecimiento mundial, los precios de la energía y las condiciones financieras externas.</div>
   </div>
 
 </div>
@@ -441,18 +439,18 @@ body{font-family:"Aller",sans-serif;font-weight:300;background:#f5f5f5;color:var
     <div style="overflow-x:auto">
       <table class="ctb">
         <colgroup><col style="width:30%"><col style="width:23.3%"><col style="width:23.3%"><col style="width:23.3%"></colgroup>
-        <thead><tr><th></th><th>Jun 2026</th><th>Mar 2026</th><th style="text-align:center">Δ</th></tr></thead>
+        <thead><tr><th></th><th style="text-align:center">Jun 2026</th><th style="text-align:center">Mar 2026</th><th style="text-align:center">Δ</th></tr></thead>
         <tbody>
-          <tr><td class="rl2">IPC diciembre</td><td>4,2%</td><td>4,0%</td><td class="ac dlt">⬆</td></tr>
+          <tr><td class="rl2">IPC diciembre</td><td>4,2%</td><td>4,0%</td><td class="ac dlt">↑</td></tr>
           <tr><td class="rl2">IPC subyacente diciembre</td><td>3,3%</td><td>3,3%</td><td class="dlt eq">=</td></tr>
-          <tr><td class="rl2">PIB (rango)</td><td>1,0–1,75%</td><td>1,5–2,5%</td><td class="ac dlt">⬇</td></tr>
-          <tr><td class="rl2">Demanda interna</td><td>2,2%</td><td>2,4%</td><td class="ac dlt">⬇</td></tr>
-          <tr><td class="rl2">Consumo total</td><td>2,2%</td><td>1,8%</td><td class="ag dlt">⬆</td></tr>
-          <tr><td class="rl2">Inversión (FBCF)</td><td>2,2%</td><td>4,0%</td><td class="ac dlt">⬇</td></tr>
-          <tr><td class="rl2">Términos de intercambio</td><td>4,2%</td><td>2,6%</td><td class="ag dlt">⬆</td></tr>
-          <tr><td class="rl2">Cuenta corriente (% PIB)</td><td>−1,4%</td><td>−1,7%</td><td class="ag dlt">⬆</td></tr>
-          <tr><td class="rl2">Precio cobre (US$ cent/lb)</td><td>580</td><td>540</td><td class="ag dlt">⬆</td></tr>
-          <tr><td class="rl2">Precio petróleo (US$/barril)</td><td>90</td><td>86</td><td class="ac dlt">⬆</td></tr>
+          <tr><td class="rl2">PIB (rango)</td><td>1,0–1,75%</td><td>1,5–2,5%</td><td class="ac dlt">↓</td></tr>
+          <tr><td class="rl2">Demanda interna</td><td>2,2%</td><td>2,4%</td><td class="ac dlt">↓</td></tr>
+          <tr><td class="rl2">Consumo total</td><td>2,2%</td><td>1,8%</td><td class="ag dlt">↑</td></tr>
+          <tr><td class="rl2">Inversión (FBCF)</td><td>2,2%</td><td>4,0%</td><td class="ac dlt">↓</td></tr>
+          <tr><td class="rl2">Términos de intercambio</td><td>4,2%</td><td>2,6%</td><td class="ag dlt">↑</td></tr>
+          <tr><td class="rl2">Cuenta corriente (% PIB)</td><td>−1,4%</td><td>−1,7%</td><td class="ag dlt">↑</td></tr>
+          <tr><td class="rl2">Precio cobre (US$ cent/lb)</td><td>580</td><td>540</td><td class="ag dlt">↑</td></tr>
+          <tr><td class="rl2">Precio petróleo (US$/barril)</td><td>90</td><td>86</td><td class="ac dlt">↑</td></tr>
         </tbody>
       </table>
     </div>
@@ -465,14 +463,14 @@ body{font-family:"Aller",sans-serif;font-weight:300;background:#f5f5f5;color:var
   <div class="cs"><div class="ct">TPM — Tasa de Política Monetaria (%)</div><div class="cw" id="w1"><canvas id="c1"></canvas></div><div class="cl"><div class="li"><div class="ll" style="background:#1B2127"></div>TPM efectiva</div><div class="li"><div class="ld" style="border-color:#E07F5C"></div>Neutro est. 4,25%</div></div><div class="cnote">Datos hasta may 2026. Fuente: BCCh.</div></div>
   <div class="cs"><div class="ct">Inflación — Total, Subyacente y Meta (%)</div><div class="cw" id="w0"><canvas id="c0"></canvas></div><div class="cl"><div class="li"><div class="ll" style="background:#1B2127"></div>IPC Total</div><div class="li"><div class="ll" style="background:#7BC143"></div>Subyacente</div><div class="li"><div class="ld" style="border-color:#E07F5C"></div>Meta 3%</div></div><div class="cnote">Último: may 2026 — Total 3,9% / Subyacente 3,2%</div></div>
   <div class="cs"><div class="ct">PIB Chile — Crecimiento Anual (%)</div><div class="cw" id="w2"><canvas id="c2"></canvas></div><div class="cl"><div class="li"><div class="lb" style="background:#7BC143"></div>Efectivo</div><div class="li"><div class="lb" style="background:#5D7082;opacity:.5"></div>Proyección</div></div><div class="cnote">2026–2028: escenario central IPoM jun 2026 (punto medio rango).</div></div>
-  <div class="cs"><div class="ct">Precio del Cobre — Efectivo vs. Proyección Jun 2026 (US$/libra)</div><div class="cw" id="w4"><canvas id="c4"></canvas></div><div class="cl"><div class="li"><div class="ll" style="background:#1B2127"></div>Efectivo</div><div class="li"><div class="ld" style="border-color:#E07F5C"></div>Proy. Jun 2026</div></div><div class="cnote">IA, transición energética y defensa impulsan demanda estructural.</div></div>
+  <div class="cs"><div class="ct">Precio del Cobre (US$/libra)</div><div class="cw" id="w4"><canvas id="c4"></canvas></div><div class="cl"><div class="li"><div class="ll" style="background:#5D7082"></div>Efectivo</div><div class="li"><div class="ld" style="border-color:#E07F5C"></div>Proyección</div></div><div class="cnote">IA, transición energética y defensa impulsan demanda estructural.</div></div>
 </div>
 
 
 </div>
 
 <script>
-const BLU='#1B2127',GRN='#7BC143',CRL='#E07F5C',SLT='#5D7082',GR4='#E6E6E6',AMB='#EAA992';
+const BLU='#5D7082',GRN='#7BC143',CRL='#E07F5C',SLT='#5D7082',GR4='#E6E6E6',AMB='#EAA992',DARK='#000000';
 const F='"Aller",sans-serif';
 const tip=document.getElementById('tooltip');
 function showT(e,h){tip.innerHTML=h;tip.style.display='block';tip.style.left=(e.clientX+14)+'px';tip.style.top=(e.clientY-28)+'px';}
@@ -533,13 +531,13 @@ function rLine(cid,wid,datasets,labels,xi,xl,tv,tl){
   ax.tks.forEach(v=>{const y=yp(v),iz=Math.abs(v)<1e-4;
     ctx.strokeStyle=iz?'rgba(0,0,0,.15)':GR4;ctx.lineWidth=iz?1:.5;
     ctx.beginPath();ctx.moveTo(PL,y);ctx.lineTo(PL+cW,y);ctx.stroke();
-    ctx.fillStyle=BLU;ctx.font='9px '+F;ctx.textAlign='right';
+    ctx.fillStyle=DARK;ctx.font='9px '+F;ctx.textAlign='right';
     ctx.fillText(v%1===0?v.toFixed(0):v.toFixed(1),PL-3,y+3);});
   if(tv!=null){const yt=yp(tv);
     ctx.strokeStyle=CRL;ctx.lineWidth=1.2;ctx.setLineDash([5,3]);
     ctx.beginPath();ctx.moveTo(PL,yt);ctx.lineTo(PL+cW,yt);ctx.stroke();ctx.setLineDash([]);
     ctx.fillStyle=CRL;ctx.font='bold 9px '+F;ctx.textAlign='left';ctx.fillText(tl,PL+4,yt+10);}
-  ctx.fillStyle=BLU;ctx.font='9px '+F;ctx.textAlign='right';
+  ctx.fillStyle=DARK;ctx.font='9px '+F;ctx.textAlign='right';
   xi.forEach((idx,k)=>{if(idx>=n)return;ctx.save();ctx.translate(xp(idx),H-PB+16);ctx.rotate(-Math.PI/6);ctx.fillText(xl[k],0,0);ctx.restore();});
   datasets.forEach(ds=>{
     ctx.setLineDash(ds.dash||[]);ctx.strokeStyle=ds.c;ctx.lineWidth=ds.w||2;
@@ -577,7 +575,7 @@ function rBars(cid,wid){
   for(let v=0;v<=14;v+=2){const y=yp(v);
     ctx.strokeStyle=v===0?'rgba(0,0,0,.15)':GR4;ctx.lineWidth=v===0?1:.5;
     ctx.beginPath();ctx.moveTo(PL,y);ctx.lineTo(PL+cW,y);ctx.stroke();
-    ctx.fillStyle=BLU;ctx.font='9px '+F;ctx.textAlign='right';ctx.fillText(v,PL-3,y+3);}
+    ctx.fillStyle=DARK;ctx.font='9px '+F;ctx.textAlign='right';ctx.fillText(v,PL-3,y+3);}
   PIBY_D.forEach((v,i)=>{
     const isP=i>=5;
     if(isP){ctx.fillStyle='rgba(27,33,39,0.22)';}else{ctx.fillStyle=GRN;}
@@ -588,7 +586,7 @@ function rBars(cid,wid){
     ctx.fillStyle=isP?BLU:GRN;ctx.font='bold 9px '+F;ctx.textAlign='center';
     ctx.fillText('+'+v.toFixed(1)+'%',xp(i)+bW/2,bY-3);
   });
-  ctx.fillStyle=BLU;ctx.font='9px '+F;
+  ctx.fillStyle=DARK;ctx.font='9px '+F;
   PIBY_L.forEach((l,i)=>{ctx.save();ctx.translate(xp(i)+bW/2,H-PB+16);ctx.rotate(-Math.PI/6);ctx.fillText(l,0,0);ctx.restore();});
   cv.onmousemove=e=>{const r=cv.getBoundingClientRect(),mx=e.clientX-r.left;
     if(mx<PL||mx>PL+cW){hideT();return;}
@@ -615,7 +613,7 @@ function rCobre(cid,wid){
   tks.forEach(v=>{const y=yp(v);
     ctx.strokeStyle=GR4;ctx.lineWidth=.5;
     ctx.beginPath();ctx.moveTo(PL,y);ctx.lineTo(PL+cW,y);ctx.stroke();
-    ctx.fillStyle=BLU;ctx.font='9px '+F;ctx.textAlign='right';
+    ctx.fillStyle=DARK;ctx.font='9px '+F;ctx.textAlign='right';
     ctx.fillText(v.toFixed(1),PL-3,y+3);});
   // Shaded area between effective end and projection
   const joinIdx=COBR_E.reduce((a,v,i)=>v!=null?i:a,-1);
@@ -632,10 +630,10 @@ function rCobre(cid,wid){
   // X labels (years)
   const xip=[];for(let i=0;i<np;i+=12)xip.push(i);
   const xlp=['2021','2022','2023','2024','2025','2026','2027','2028'];
-  ctx.fillStyle=BLU;ctx.font='9px '+F;ctx.textAlign='right';
+  ctx.fillStyle=DARK;ctx.font='9px '+F;ctx.textAlign='right';
   xip.forEach((idx,k)=>{ctx.save();ctx.translate(xp(idx),H-PB+16);ctx.rotate(-Math.PI/6);ctx.fillText(xlp[k],0,0);ctx.restore();});
   // Effective line
-  ctx.strokeStyle=BLU;ctx.lineWidth=2;ctx.lineJoin='round';ctx.setLineDash([]);
+  ctx.strokeStyle=SLT;ctx.lineWidth=2;ctx.lineJoin='round';ctx.setLineDash([]);
   ctx.beginPath();let go=false;
   COBR_E.forEach((v,i)=>{if(v==null){go=false;return;}go?ctx.lineTo(xp(i),yp(v)):ctx.moveTo(xp(i),yp(v));go=true;});
   ctx.stroke();
@@ -649,10 +647,10 @@ function rCobre(cid,wid){
   const liE=COBR_E.reduce((a,v,i)=>v!=null?i:a,-1);
   if(liE>=0){
     const lv=COBR_E[liE];
-    ctx.fillStyle=BLU;ctx.beginPath();ctx.arc(xp(liE),yp(lv),3,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle=SLT;ctx.beginPath();ctx.arc(xp(liE),yp(lv),3,0,Math.PI*2);ctx.fill();
     ctx.font='bold 9px '+F;ctx.textAlign='center';
     ctx.fillStyle='#fff';ctx.fillRect(xp(liE)-14,yp(lv)-20,28,11);
-    ctx.fillStyle=BLU;ctx.fillText('US$'+lv.toFixed(1),xp(liE),yp(lv)-11);
+    ctx.fillStyle=SLT;ctx.fillText('US$'+lv.toFixed(1),xp(liE),yp(lv)-11);
   }
   // Projection dot + label to the RIGHT
   const liP=COBR_P.reduce((a,v,i)=>v!=null?i:a,-1);
@@ -667,7 +665,7 @@ function rCobre(cid,wid){
   cv.onmousemove=e=>{const r=cv.getBoundingClientRect(),mx=e.clientX-r.left;
     if(mx<PL||mx>PL+cW){hideT();return;}
     let ci=0,md=Infinity;for(let i=0;i<np;i++){const d=Math.abs(xp(i)-mx);if(d<md){md=d;ci=i;}}
-    const lines=[[COBR_E,'Efectivo',BLU],[COBR_P,'Proy. Jun 26',CRL]]
+    const lines=[[COBR_E,'Efectivo',SLT],[COBR_P,'Proyección',CRL]]
       .filter(([d])=>d[ci]!=null)
       .map(([d,l,c])=>'<span style="color:'+c+'">●</span> '+l+': <b>US$'+d[ci].toFixed(2)+'</b>').join('<br>');
     if(!lines){hideT();return;}showT(e,'<span style="opacity:.65">'+LPETR[ci]+'</span><br>'+lines);};
@@ -701,7 +699,7 @@ function rCorredor(){
   // grid
   tks.forEach(v=>{const y=yp(v);ctx.strokeStyle=GR4;ctx.lineWidth=.5;
     ctx.beginPath();ctx.moveTo(PL,y);ctx.lineTo(PL+cW,y);ctx.stroke();
-    ctx.fillStyle=BLU;ctx.font='9px '+F;ctx.textAlign='right';ctx.fillText(v,PL-3,y+3);});
+    ctx.fillStyle=DARK;ctx.font='9px '+F;ctx.textAlign='right';ctx.fillText(v,PL-3,y+3);});
   // banda externa 66% (gris azulado claro)
   const s=CORR_U.findIndex(v=>v!=null);
   ctx.beginPath();let started=false;
@@ -714,7 +712,7 @@ function rCorredor(){
   for(let i=n-1;i>=s;i--){if(CORR_C[i]==null)continue;const d=(CORR_C[i]+CORR_D[i])/2;ctx.lineTo(xp(i),yp(d));}
   ctx.closePath();ctx.fillStyle='#7E92A2';ctx.fill();
   // x labels
-  ctx.fillStyle=BLU;ctx.font='8px '+F;
+  ctx.fillStyle=DARK;ctx.font='8px '+F;
   CORR_L.forEach((l,i)=>{ctx.save();ctx.translate(xp(i),H-PB+14);ctx.rotate(-Math.PI/6);ctx.textAlign='right';ctx.fillText(l,0,0);ctx.restore();});
   // TPM efectiva
   ctx.strokeStyle=BLU;ctx.lineWidth=2.4;ctx.lineJoin='round';ctx.beginPath();let go=false;
@@ -767,7 +765,7 @@ function rCorredor2(){
   ctx.fillStyle='#fff';ctx.fillRect(0,0,W,H);
   tks.forEach(v=>{const y=yp(v);ctx.strokeStyle=GR4;ctx.lineWidth=.5;
     ctx.beginPath();ctx.moveTo(PL,y);ctx.lineTo(PL+cW,y);ctx.stroke();
-    ctx.fillStyle=BLU;ctx.font='9px '+F;ctx.textAlign='right';ctx.fillText(v,PL-3,y+3);});
+    ctx.fillStyle=DARK;ctx.font='9px '+F;ctx.textAlign='right';ctx.fillText(v,PL-3,y+3);});
   const s=C2_U.findIndex(v=>v!=null);
   ctx.beginPath();let st=false;
   for(let i=s;i<n;i++){if(C2_U[i]==null)continue;const x=xp(i),y=yp(C2_U[i]);st?ctx.lineTo(x,y):ctx.moveTo(x,y);st=true;}
@@ -777,7 +775,7 @@ function rCorredor2(){
   for(let i=s;i<n;i++){if(C2_C[i]==null)continue;const u=(C2_C[i]+C2_U[i])/2;const x=xp(i),y=yp(u);st?ctx.lineTo(x,y):ctx.moveTo(x,y);st=true;}
   for(let i=n-1;i>=s;i--){if(C2_C[i]==null)continue;const d=(C2_C[i]+C2_D[i])/2;ctx.lineTo(xp(i),yp(d));}
   ctx.closePath();ctx.fillStyle='#7E92A2';ctx.fill();
-  ctx.fillStyle=BLU;ctx.font='8px '+F;
+  ctx.fillStyle=DARK;ctx.font='8px '+F;
   C2_L.forEach((l,i)=>{ctx.save();ctx.translate(xp(i),H-PB+14);ctx.rotate(-Math.PI/6);ctx.textAlign='right';ctx.fillText(l,0,0);ctx.restore();});
   ctx.strokeStyle=BLU;ctx.lineWidth=2.4;ctx.lineJoin='round';ctx.beginPath();let go=false;
   C2_TPM.forEach((v,i)=>{if(v==null){go=false;return;}go?ctx.lineTo(xp(i),yp(v)):ctx.moveTo(xp(i),yp(v));go=true;});
