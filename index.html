@@ -25,6 +25,8 @@
 .wh-meta{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
 .wh-tag{font-size:10px;font-weight:700;letter-spacing:.08em;color:#1A9FCC;text-transform:uppercase;line-height:1}
 .wh-sub{font-size:10px;font-weight:300;color:#969696;line-height:1.3;white-space:nowrap}
+a.wh-src{text-decoration:none;cursor:pointer;transition:color .15s}
+a.wh-src:hover{color:#5D7082;text-decoration:underline}
 .dlbtn{display:inline-flex;align-items:center;gap:6px;padding:6px 13px;font-size:12px;font-weight:300;border-radius:4px;border:1px solid var(--gr3);background:transparent;color:var(--dark);cursor:pointer;white-space:nowrap;flex-shrink:0}
 .dlbtn:hover{background:var(--gr4)}
 
@@ -126,7 +128,8 @@
 
 /* Evolution table */
 .ctb{width:100%;border-collapse:collapse;font-size:12px;font-weight:300;table-layout:fixed}
-.ctb th{text-align:left;padding:6px 10px;color:var(--dark);font-weight:700;border-bottom:2px solid var(--g);font-size:11px;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+.ctb th{text-align:center;padding:6px 10px;color:var(--dark);font-weight:700;border-bottom:2px solid var(--g);font-size:11px;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+.ctb th:first-child{text-align:left}
 .ctb td{padding:0 10px;color:var(--dark);font-weight:300;border-bottom:1px solid var(--gr4);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:30px;line-height:30px;vertical-align:middle;text-align:center}
 .ctb td.rl2{text-align:left}
 .ctb tr:last-child td{border-bottom:none}
@@ -184,8 +187,8 @@
   <div class="wh-meta">
     <span class="wh-tag">Información Pública</span>
     <span class="wh-sub">Periodicidad: Trimestral (IPoM)</span>
-    <span class="wh-sub">Última actualización: Sep 2026</span>
-    <span class="wh-sub">Fuente: Banco Central de Chile</span>
+    <span class="wh-sub">Última actualización: 9 sep 2026</span>
+    <a class="wh-sub wh-src" href="https://www.bcentral.cl/contenido/-/detalle/publicaciones/politica-monetaria/ipom-septiembre-2026" target="_blank" rel="noopener">Fuente: Banco Central de Chile ↗</a>
   </div>
 </div>
 
@@ -210,10 +213,10 @@
     <div class="datb">
       <div class="datt">Datos a la fecha del IPoM</div>
       <div class="datg">
-        <div class="mc"><div class="ml">IPC (Jul 2026)</div><div class="mv">4,0%</div><div class="ms">Subyacente: ~3,3%</div></div>
+        <div class="mc"><div class="ml">IPC (Ago 2026)</div><div class="mv">4,1%</div><div class="ms">Subyacente: ~3,3%</div></div>
         <div class="mc"><div class="ml">PIB 2026 (Proyección)</div><div class="mv">0,25–0,75%</div><div class="ms">Rango proy.</div></div>
         <div class="mc"><div class="ml">Desempleo (Jul)</div><div class="mv">9,5%</div><div class="ms">Al alza</div></div>
-        <div class="mc"><div class="ml">Cobre (Med. plazo)</div><div class="mv">US$5,6</div><div class="ms">/libra prom.</div></div>
+        <div class="mc"><div class="ml">Cobre (Med. plazo)</div><div class="mv">US$6,1</div><div class="ms">/libra prom.</div></div>
       </div>
     </div>
   </div>
@@ -277,8 +280,8 @@
         <div class="kvn">Contracción vs +2,2% jun: postergación de proyectos e inmobiliario débil. Rebote esperado 2027 (+8,1%) con Ley Reconstrucción.</div>
       </div>
       <div class="kvr">
-        <div><div class="kvt">Cobre (med. plazo)</div><div class="kvv ag">US$5,6/lb</div></div>
-        <div class="kvn">Supuesto revisado al alza (US$5,0 jun). Precio cercano a US$6,5/lb en LME; prima transitoria por acumulación inventarios EEUU.</div>
+        <div><div class="kvt">Cobre (med. plazo)</div><div class="kvv ag">US$6,1/lb</div></div>
+        <div class="kvn">Supuesto revisado al alza (US$5,8 jun). Precio cercano a US$6,5/lb en LME; prima transitoria por acumulación inventarios EEUU.</div>
       </div>
       <div class="kvr">
         <div><div class="kvt">Sector externo</div><div class="kvv ag">TI más favorables</div></div>
@@ -545,14 +548,14 @@
         <thead><tr><th></th><th>Sep 2026</th><th>Jun 2026</th><th>Mar 2026</th><th>Dic 2025</th></tr></thead>
         <tbody>
           <tr><td class="rl2">TPM</td><td>4,50%</td><td>4,50%</td><td>4,50%</td><td>4,50%</td></tr>
-          <tr><td class="rl2">IPC total (últ. dato)</td><td class="ac">~4,0% (jul)</td><td class="ac">3,9% (may)</td><td>2,4% (feb)</td><td>3,4% (nov)</td></tr>
+          <tr><td class="rl2">IPC total (últ. dato)</td><td class="ac">4,1% (ago)</td><td class="ac">3,9% (may)</td><td>2,4% (feb)</td><td>3,4% (nov)</td></tr>
           <tr><td class="rl2">IPC subyacente</td><td>~3,3%</td><td>3,2%</td><td>3,3%</td><td>3,4%</td></tr>
           <tr><td class="rl2">PIB rango 2026 (f)</td><td class="ac">0,25–0,75%</td><td class="ac">1,0–1,75%</td><td>1,5–2,5%</td><td>2,0–3,0%</td></tr>
           <tr><td class="rl2">Cuenta corriente 2026</td><td class="ac">−2,6% PIB</td><td class="ag">−1,4% PIB</td><td>−1,7% PIB</td><td>−2,2% PIB</td></tr>
           <tr><td class="rl2">Precio petróleo (f)</td><td class="ac">US$79/barril</td><td class="ac">US$90/barril</td><td>US$86/barril</td><td>US$62/barril</td></tr>
-          <tr><td class="rl2">Precio cobre med. plazo</td><td class="ag">US$5,6/lb</td><td class="ag">US$5,8/lb</td><td>US$5,4/lb</td><td>US$4,7/lb</td></tr>
-          <tr><td class="rl2">Shock externo clave</td><td class="ac">Escalada M. Oriente + IA</td><td class="ac">Conflicto M. Oriente</td><td>Guerra M. Oriente</td><td>Tensiones comerc.</td></tr>
-          <tr><td class="rl2">Sesgo de política</td><td class="ac">Neutral / R a R</td><td class="ac">Neutral/Cauteloso</td><td>Neutral/Cauteloso</td><td>Neutral</td></tr>
+          <tr><td class="rl2">Precio cobre med. plazo</td><td class="ag">US$6,1/lb</td><td class="ag">US$5,8/lb</td><td>US$5,4/lb</td><td>US$4,7/lb</td></tr>
+          <tr><td class="rl2">Shock externo clave</td><td class="ac">M. Or. + IA</td><td class="ac">Conflicto M. Or.</td><td>Guerra M. Or.</td><td>Comercial</td></tr>
+          <tr><td class="rl2">Sesgo de política</td><td class="ac">Neutral / R a R</td><td class="ac">Cauteloso</td><td>Cauteloso</td><td>Neutral</td></tr>
         </tbody>
       </table>
     </div>
@@ -582,10 +585,10 @@
 
 <!-- ══════════════════════ GRÁFICOS ══════════════════════ -->
 <div class="mp" id="panel-charts">
-  <div class="cs"><div class="ct">TPM — Tasa de Política Monetaria (%)</div><div class="cw" id="w1"><canvas id="c1"></canvas></div><div class="cl"><div class="li"><div class="ll" style="background:#1B2127"></div>TPM efectiva</div><div class="li"><div class="ld" style="border-color:#E07F5C"></div>Neutro est. 4,25%</div></div><div class="cnote">Datos hasta jul 2026. Fuente: BCCh.</div></div>
-  <div class="cs"><div class="ct">Inflación — Total, Subyacente y Meta (%)</div><div class="cw" id="w0"><canvas id="c0"></canvas></div><div class="cl"><div class="li"><div class="ll" style="background:#1B2127"></div>IPC Total</div><div class="li"><div class="ll" style="background:#7BC143"></div>Subyacente</div><div class="li"><div class="ld" style="border-color:#E07F5C"></div>Meta 3%</div></div><div class="cnote">Último: jul 2026 — Total ~4,0% / Subyacente ~3,3%</div></div>
+  <div class="cs"><div class="ct">TPM — Tasa de Política Monetaria (%)</div><div class="cw" id="w1"><canvas id="c1"></canvas></div><div class="cl"><div class="li"><div class="ll" style="background:#1B2127"></div>TPM efectiva</div><div class="li"><div class="ld" style="border-color:#E07F5C"></div>Neutro est. 4,25%</div></div><div class="cnote">Datos hasta ago 2026 · TPM 4,5% (mantenida RPM sep). Fuente: BCCh.</div></div>
+  <div class="cs"><div class="ct">Inflación — Total, Subyacente y Meta (%)</div><div class="cw" id="w0"><canvas id="c0"></canvas></div><div class="cl"><div class="li"><div class="ll" style="background:#1B2127"></div>IPC Total</div><div class="li"><div class="ll" style="background:#7BC143"></div>Subyacente</div><div class="li"><div class="ld" style="border-color:#E07F5C"></div>Meta 3%</div></div><div class="cnote">Último: ago 2026 — Total 4,1% / Subyacente ~3,3%</div></div>
   <div class="cs"><div class="ct">PIB Chile — Crecimiento Anual (%)</div><div class="cw" id="w2"><canvas id="c2"></canvas></div><div class="cl"><div class="li"><div class="lb" style="background:#7BC143"></div>Efectivo</div><div class="li"><div class="lb" style="background:#5D7082;opacity:.5"></div>Proyección</div></div><div class="cnote">2026–2028: escenario central IPoM sep 2026 (punto medio rango).</div></div>
-  <div class="cs"><div class="ct">Precio del Cobre (US$/libra)</div><div class="cw" id="w4"><canvas id="c4"></canvas></div><div class="cl"><div class="li"><div class="ll" style="background:#5D7082"></div>Efectivo</div><div class="li"><div class="ld" style="border-color:#E07F5C"></div>Proyección</div></div><div class="cnote">Supuesto med. plazo revisado a US$5,6/lb (vs US$5,0 jun). Precio actual ~US$6,5/lb incluye prima transitoria.</div></div>
+  <div class="cs"><div class="ct">Precio del Cobre (US$/libra)</div><div class="cw" id="w4"><canvas id="c4"></canvas></div><div class="cl"><div class="li"><div class="ll" style="background:#5D7082"></div>Efectivo</div><div class="li"><div class="ld" style="border-color:#E07F5C"></div>Proy. sep</div><div class="li"><div class="ld" style="border-color:#B5C1CB"></div>Proy. jun</div></div><div class="cnote">Supuesto med. plazo revisado a US$6,1/lb (vs US$5,8 jun). Precio actual ~US$6,5/lb incluye prima transitoria.</div></div>
 </div>
 
 
@@ -600,12 +603,12 @@ function showT(e,h){tip.innerHTML=h;tip.style.display='block';tip.style.left=(e.
 function hideT(){tip.style.display='none';}
 const MN=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
 function mkL(sy,ey,em){const a=[];for(let y=sy;y<=ey;y++){const e=y===ey?em:12;for(let m=0;m<e;m++)a.push(MN[m]+' '+y);}return a;}
-const LALL=mkL(2021,2026,7);
+const LALL=mkL(2021,2026,8);
 
 /* ── Series data ── */
-const TPM=[0.5,0.5,0.5,0.5,0.5,0.75,1.5,2.5,3.5,4.0,4.5,5.0,5.5,6.5,7.25,8.25,9.75,10.25,11.25,11.25,11.25,11.25,10.75,10.25,9.75,8.75,7.75,6.75,6.25,5.75,5.5,5.25,5.25,5.25,5.25,5.25,5.25,5.25,5.25,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,4.75,4.75,4.75,4.75,4.75,4.75,4.75,4.75,4.5,4.5,4.5,4.5,4.5,4.5,4.5,4.5];
-const IPCT=[3.0,3.4,4.5,4.6,3.6,3.8,4.4,5.0,5.3,6.0,6.7,7.2,7.7,8.3,9.0,9.9,10.5,10.9,10.8,11.1,10.5,10.2,9.9,9.2,8.7,8.2,7.8,7.6,6.5,5.8,5.3,4.5,3.9,3.8,3.7,3.5,3.5,3.5,3.6,3.8,4.1,3.9,4.0,3.8,3.7,3.4,3.4,3.4,3.5,3.5,3.4,3.5,3.5,3.4,3.4,3.4,3.3,3.0,2.8,2.6,2.4,2.6,3.0,3.4,3.9,4.0,4.0];
-const IPCS=[2.8,3.0,3.6,3.6,3.3,3.5,4.0,4.5,4.8,5.2,5.7,6.1,6.5,7.0,7.5,8.0,8.5,8.7,8.9,9.2,8.9,8.8,8.6,8.0,7.5,7.1,6.7,6.3,5.8,5.3,4.9,4.4,4.0,3.9,3.8,3.7,3.7,3.6,3.8,3.9,3.8,3.8,3.9,3.7,3.6,3.5,3.5,3.6,3.5,3.5,3.4,3.5,3.5,3.4,3.4,3.4,3.3,3.2,3.1,3.0,3.3,3.2,3.2,3.2,3.2,3.3,3.3];
+const TPM=[0.5,0.5,0.5,0.5,0.5,0.75,1.5,2.5,3.5,4.0,4.5,5.0,5.5,6.5,7.25,8.25,9.75,10.25,11.25,11.25,11.25,11.25,10.75,10.25,9.75,8.75,7.75,6.75,6.25,5.75,5.5,5.25,5.25,5.25,5.25,5.25,5.25,5.25,5.25,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,4.75,4.75,4.75,4.75,4.75,4.75,4.75,4.75,4.5,4.5,4.5,4.5,4.5,4.5,4.5,4.5,4.5];
+const IPCT=[3.0,3.4,4.5,4.6,3.6,3.8,4.4,5.0,5.3,6.0,6.7,7.2,7.7,8.3,9.0,9.9,10.5,10.9,10.8,11.1,10.5,10.2,9.9,9.2,8.7,8.2,7.8,7.6,6.5,5.8,5.3,4.5,3.9,3.8,3.7,3.5,3.5,3.5,3.6,3.8,4.1,3.9,4.0,3.8,3.7,3.4,3.4,3.4,3.5,3.5,3.4,3.5,3.5,3.4,3.4,3.4,3.3,3.0,2.8,2.6,2.4,2.6,3.0,3.4,3.9,4.0,4.0,4.1];
+const IPCS=[2.8,3.0,3.6,3.6,3.3,3.5,4.0,4.5,4.8,5.2,5.7,6.1,6.5,7.0,7.5,8.0,8.5,8.7,8.9,9.2,8.9,8.8,8.6,8.0,7.5,7.1,6.7,6.3,5.8,5.3,4.9,4.4,4.0,3.9,3.8,3.7,3.7,3.6,3.8,3.9,3.8,3.8,3.9,3.7,3.6,3.5,3.5,3.6,3.5,3.5,3.4,3.5,3.5,3.4,3.4,3.4,3.3,3.2,3.1,3.0,3.3,3.2,3.2,3.2,3.2,3.3,3.3,3.3];
 /* Expectativas a 2 años — trimestrales, ene-2021 → mar-2026 */
 const LEXP=mkL(2021,2026,5);
 const EEE=[3.0,3.0,3.0,3.1,3.2,3.2,3.1,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0];
@@ -622,12 +625,12 @@ const PETR_D=[...Array(60).fill(null),62,62,62,62,62,62,62,62,62,62,62,62,62,62,
 const PETR_M=[...Array(62).fill(null),90,100,100,95,89,86,84,82,80,78,77,75,74,73,72,71,71,71,70,69,68,68,67,67,67,66,65,65,65,65,64,64,64,63];
 /* Proyección Jun 2026: 2026 prom 90, 2027 78, 2028 74 (WTI-Brent) */
 const PETR_J=[...Array(64).fill(null),95,93,91,90,89,88,86,84,82,81,79,78,78,77,76,76,75,75,74,74,74,74,74,74,74,74,74,74,74,74,74,74];
-/* Cobre mensual 2021→2028 — actualizado a jul 2026 */
+/* Cobre mensual 2021→2028 — actualizado a ago 2026 */
 const COBR_E=[3.5,3.9,4.0,4.3,4.5,4.2,4.3,4.2,4.5,4.6,4.4,4.4,4.4,4.6,4.6,4.7,4.3,3.8,3.5,3.6,3.7,3.5,3.7,3.8,3.9,4.0,3.9,3.9,3.7,3.7,3.7,3.9,3.9,4.0,3.8,3.8,3.7,3.8,3.9,3.9,4.0,4.0,3.9,3.8,4.0,4.2,4.3,4.5,4.5,4.7,4.6,4.5,4.5,4.6,4.6,4.6,4.7,4.7,4.8,4.9,5.0,5.2,5.4,5.5,5.6,6.2,6.5,...Array(29).fill(null)];
 /* Proyección Jun 2026: 2026 prom 5,8 → 2027 5,2 → 2028 5,0 */
 const COBR_P=[...Array(64).fill(null),5.7,5.8,5.8,5.8,5.7,5.6,5.5,5.4,5.3,5.2,5.2,5.2,5.2,5.2,5.2,5.2,5.1,5.1,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0];
-/* Proyección Sep 2026: med. plazo US$5,6/lb */
-const COBR_S=[...Array(66).fill(null),6.3,6.1,5.9,5.8,5.7,5.7,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6,5.6];
+/* Proyección Sep 2026: med. plazo US$6,1/lb */
+const COBR_S=[...Array(66).fill(null),6.4,6.35,6.3,6.25,6.2,6.18,6.16,6.14,6.13,6.12,6.11,6.1,6.1,6.1,6.1,6.1,6.1,6.1,6.1,6.1,6.1,6.1,6.1,6.1,6.1,6.1,6.1,6.1,6.1,6.1];
 
 /* ── Chart engine ── */
 function autoAx(data){
@@ -766,6 +769,10 @@ function rCobre(cid,wid){
   if(liS>=0){const lv=COBR_S[liS];ctx.fillStyle=CRL;ctx.beginPath();ctx.arc(xp(liS),yp(lv),3,0,Math.PI*2);ctx.fill();
     ctx.font='bold 9px '+F;ctx.textAlign='left';ctx.fillStyle='#fff';ctx.fillRect(xp(liS)+6,yp(lv)-9,28,11);
     ctx.fillStyle=CRL;ctx.fillText('US$'+lv.toFixed(1),xp(liS)+7,yp(lv)+3);}
+  const liP=COBR_P.reduce((a,v,i)=>v!=null?i:a,-1);
+  if(liP>=0){const lv=COBR_P[liP];ctx.fillStyle='#B5C1CB';ctx.beginPath();ctx.arc(xp(liP),yp(lv),3,0,Math.PI*2);ctx.fill();
+    ctx.font='bold 9px '+F;ctx.textAlign='left';ctx.fillStyle='#fff';ctx.fillRect(xp(liP)+6,yp(lv)-9,28,11);
+    ctx.fillStyle='#8A99A5';ctx.fillText('US$'+lv.toFixed(1),xp(liP)+7,yp(lv)+3);}
   cv.onmousemove=e=>{const r=cv.getBoundingClientRect(),mx=e.clientX-r.left;
     if(mx<PL||mx>PL+cW){hideT();return;}
     let ci=0,md=Infinity;for(let i=0;i<np;i++){const d=Math.abs(xp(i)-mx);if(d<md){md=d;ci=i;}}
@@ -1009,7 +1016,7 @@ function dlHTML(){
   const s=Array.from(document.querySelectorAll('style')).map(x=>x.outerHTML).join('');
   const b=document.querySelector('.w').outerHTML;
   const sc='<script>'+document.querySelector('script').textContent+'<\/script>';
-  const h='<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>IPoM Tracker BCCh</title>'+s+'</head><body style="background:#f5f5f5;min-height:100vh;display:flex;justify-content:center;padding:2rem 1rem"><div style="max-width:740px;width:100%;background:#fff;border-radius:10px;padding:2rem 1.5rem 2.5rem;box-shadow:0 1px 4px rgba(0,0,0,.08)"><div class="tooltip" id="tooltip"></div>'+b+sc+'</div></body></html>';
+  const h='<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>IPoM Tracker BCCh</title>'+s+'</head><body style="background:#f5f5f5;min-height:100vh;display:flex;justify-content:center;padding:2rem 1rem;zoom:1.1"><div style="max-width:740px;width:100%;background:#fff;border-radius:10px;padding:2rem 1.5rem 2.5rem;box-shadow:0 1px 4px rgba(0,0,0,.08)"><div class="tooltip" id="tooltip"></div>'+b+sc+'</div></body></html>';
   const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.download='ipom-tracker-bcch.html';a.click();
 }
 </script>
@@ -1043,7 +1050,7 @@ const MODAL_DATA = {
     body: `<b>Recuadro I.1 — Riesgos macroeconómicos de la Inteligencia Artificial:</b> Analiza el auge de la IA como motor del crecimiento global, concentrado en economías asiáticas y EE.UU. Identifica riesgos ante dudas sobre la capacidad de las empresas tecnológicas de sostener el alto ritmo de inversión, dado su creciente endeudamiento y la mayor volatilidad de sus acciones.<br><br>
 <b>Recuadro I.2 — Factores detrás del desempeño reciente del mercado laboral:</b> Combina factores persistentes (alza de costos laborales, automatización) y cíclicos (debilidad de demanda interna, especialmente construcción). La tasa de desocupación subió a 9,5%, con destrucción de empleo formal y menor crecimiento de masa salarial real.<br><br>
 <b>Recuadro I.3 — Evolución de la confianza de empresas y hogares:</b> Marcado descenso del IPEC e IMCE desde fines del 1T 2026, influido por factores locales (desaceleración, costo de combustibles) y externos (conflicto Medio Oriente, volatilidad financiera). En el margen se aprecia leve repunte en algunas mediciones.<br><br>
-<b>Recuadro II.1 — Precio del cobre y perspectivas de mediano plazo:</b> Supuesto de mediano plazo revisado al alza de US$5,0 a <b>US$5,6/lb</b>. El precio actual (~US$6,5/lb) incorpora una prima transitoria por acumulación extraordinaria de inventarios en EE.UU. (>1,2 MM ton desde feb 2025) ante incertidumbre arancelaria. El precio incentivo estructural converge a US$5,6/lb hacia 2028–2029.`,
+<b>Recuadro II.1 — Precio del cobre y perspectivas de mediano plazo:</b> Supuesto de mediano plazo revisado al alza de US$5,8 a <b>US$6,1/lb</b>. El precio actual (~US$6,5/lb) incorpora una prima transitoria por acumulación extraordinaria de inventarios en EE.UU. (>1,2 MM ton desde feb 2025) ante incertidumbre arancelaria. El precio incentivo estructural converge a US$6,1/lb hacia 2028–2029.`,
     chartNote: 'Contribución estimada al recorte de proyección PIB 2026 vs IPoM Jun (pp). Fuente: BCCh IPoM Sep 2026.',
     chartData: {
       labels: ['Demanda interna', 'Clima adverso 3T', 'Menor minería', 'Otros'],
