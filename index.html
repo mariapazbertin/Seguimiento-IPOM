@@ -175,6 +175,19 @@ a.wh-src:hover{color:#5D7082;text-decoration:underline}
 
 /* Tooltip */
 .tooltip{position:fixed;background:var(--dark);color:#fff;font-size:11px;font-weight:300;padding:5px 9px;border-radius:4px;pointer-events:none;display:none;z-index:9999;white-space:nowrap;line-height:1.6}
+.btn-manual{display:inline-flex;align-items:center;gap:7px;padding:8px 16px;font-size:12px;font-weight:300;font-family:'Aller',sans-serif;border:1px solid var(--gr3);border-radius:5px;background:transparent;color:var(--sl);cursor:pointer;transition:all .15s}
+.btn-manual:hover{background:var(--gr4);color:#000}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:1000;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:10px;max-width:680px;width:90%;padding:28px 28px 24px;box-shadow:0 8px 32px rgba(0,0,0,.18);position:relative;max-height:88vh;overflow-y:auto}
+.modal-close{position:absolute;top:14px;right:16px;font-size:18px;background:none;border:none;cursor:pointer;color:var(--sl);line-height:1}
+.modal-title{font-size:14px;font-weight:700;color:var(--g);margin-bottom:4px}
+.modal-sub{font-size:11px;color:var(--sl);font-weight:300;margin-bottom:18px}
+.modal-step{display:flex;gap:12px;margin-bottom:14px;align-items:flex-start}
+.modal-step-body{font-size:12px;font-weight:300;color:#000;line-height:1.5}
+.modal-step-body b{font-weight:700}
+.modal-divider{border:none;border-top:1px solid var(--gr4);margin:16px 0}
+.modal-note{font-size:11px;color:var(--sl);font-weight:300;line-height:1.5;font-style:italic}
 </style>
 </head>
 <body style="background:#f5f5f5;min-height:100vh;display:flex;justify-content:center;padding:2rem 1rem;zoom:1.1">
@@ -309,6 +322,10 @@ a.wh-src:hover{color:#5D7082;text-decoration:underline}
     </div>
     <div style="font-size:11px;font-weight:300;color:var(--dark);line-height:1.4"><b>Recuadro I.1: Riesgos macroeconómicos de la IA</b> · <b>Rec. I.2: Mercado laboral</b> · <b>Rec. I.3: Confianza de empresas y hogares</b> · <b>Rec. II.1: Precio del cobre y perspectivas</b>. Haz clic para ver el análisis detallado.</div>
   </div>
+
+<div style="text-align:right;padding:16px 0 4px">
+<button class="btn-manual" onclick="document.getElementById('updateModal').classList.add('open')"><span style="font-size:13px;line-height:1">↻</span>Manual de actualización</button>
+</div>
 
 </div>
 
@@ -591,8 +608,53 @@ a.wh-src:hover{color:#5D7082;text-decoration:underline}
   <div class="cs"><div class="ct">Precio del Cobre (US$/libra)</div><div class="cw" id="w4"><canvas id="c4"></canvas></div><div class="cl"><div class="li"><div class="ll" style="background:#5D7082"></div>Efectivo</div><div class="li"><div class="ld" style="border-color:#E07F5C"></div>Proy. sep</div><div class="li"><div class="ld" style="border-color:#B5C1CB"></div>Proy. jun</div></div><div class="cnote">Supuesto med. plazo revisado a US$6,1/lb (vs US$5,8 jun). Precio actual ~US$6,5/lb incluye prima transitoria.</div></div>
 </div>
 
+<!-- ══ MODAL MANUAL DE ACTUALIZACIÓN ══ -->
+<div class="modal-overlay" id="updateModal" onclick="if(event.target===this)this.classList.remove('open')">
+<div class="modal-box">
+<button class="modal-close" onclick="document.getElementById('updateModal').classList.remove('open')">✕</button>
+<div class="modal-title">Manual de actualización</div>
+<div class="modal-sub">Cómo incorporar un nuevo IPoM al tracker dejando todas las pestañas, Evolución y Gráficos sincronizados.</div>
 
+<div class="modal-step">
+<div style="font-size:12px;font-weight:700;color:#000;min-width:20px;flex-shrink:0;margin-top:1px">1.</div>
+<div class="modal-step-body"><b>Descarga el PDF</b> del nuevo IPoM desde bcentral.cl (Publicaciones → Política Monetaria → IPoM) y copia el link de la página del informe.</div>
 </div>
+
+<div class="modal-step">
+<div style="font-size:12px;font-weight:700;color:#000;min-width:20px;flex-shrink:0;margin-top:1px">2.</div>
+<div class="modal-step-body"><b>Súbelo al Project</b> de Claude (arrástralo o "Add content") junto con este archivo HTML, para que queden disponibles en la sesión.</div>
+</div>
+
+<div class="modal-step">
+<div style="font-size:12px;font-weight:700;color:#000;min-width:20px;flex-shrink:0;margin-top:1px">3.</div>
+<div class="modal-step-body"><b>Pide crear la pestaña nueva.</b> Claude extrae del PDF los datos clave (TPM, IPC total y subyacente, PIB, cuenta corriente, cobre, petróleo, desempleo, sesgo y recuadros) y arma la pestaña replicando la estructura de la más reciente, que queda activa y a la izquierda.</div>
+</div>
+
+<div class="modal-step">
+<div style="font-size:12px;font-weight:700;color:#000;min-width:20px;flex-shrink:0;margin-top:1px">4.</div>
+<div class="modal-step-body"><b>Actualiza Evolución.</b> Agrega la nueva columna (la más reciente primero) en la tabla de Comparación y en la de Revisión, con los Δ recalculados frente al IPoM anterior.</div>
+</div>
+
+<div class="modal-step">
+<div style="font-size:12px;font-weight:700;color:#000;min-width:20px;flex-shrink:0;margin-top:1px">5.</div>
+<div class="modal-step-body"><b>Actualiza los Gráficos.</b> Extiende las series (TPM e inflación hasta el último dato, PIB con el nuevo escenario), agrega la nueva curva de proyección del cobre con su punto y etiqueta, y renombra las leyendas de proyección.</div>
+</div>
+
+<div class="modal-step">
+<div style="font-size:12px;font-weight:700;color:#000;min-width:20px;flex-shrink:0;margin-top:1px">6.</div>
+<div class="modal-step-body"><b>Cierra y verifica.</b> Cambia "Última actualización", apunta el link "Fuente" al nuevo informe, revisa que ningún valor quede en la versión vieja (tarjetas, tablas, notas, recuadros) y mueve este botón al panel nuevo.</div>
+</div>
+
+<div class="modal-step">
+<div style="font-size:12px;font-weight:700;color:#000;min-width:20px;flex-shrink:0;margin-top:1px">7.</div>
+<div class="modal-step-body"><b>Publica en Google Drive.</b> Sube el HTML final —ya con todas las hojas actualizadas— a la unidad compartida, dejando publicado el monitor:<br><span style="display:inline-block;margin-top:5px;font-family:'Courier New',monospace;font-size:11px;color:var(--sl);background:var(--gr4);padding:4px 8px;border-radius:4px;word-break:break-all">G:\Unidades compartidas\MFO-Dashboards\Monitores\Estrategia</span></div>
+</div>
+
+<hr class="modal-divider">
+<div class="modal-note">Regla de oro: toda cifra que aparezca en más de un lugar (tarjeta, tabla, gráfico, nota, recuadro) debe actualizarse en TODOS a la vez. La verificación visual pestaña por pestaña evita dejar datos a medias. Menos es más: al agregar contenido, recorta lo menos relevante en vez de alargar.</div>
+</div>
+</div>
+
 </div>
 
 <script>
@@ -1021,7 +1083,7 @@ function dlHTML(){
 }
 </script>
 <!-- ══ MODAL RECUADRO ══ -->
-<div id="rec-modal" onclick="if(event.target===this)closeModal()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:1000;align-items:center;justify-content:center;padding:20px">
+<div id="rec-modal" onclick="if(event.target===this)closeModal()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:1000;align-items:center;justify-content:center;padding:20px;font-family:'Aller',sans-serif">
   <div style="background:#fff;border-radius:8px;max-width:620px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:0 8px 32px rgba(0,0,0,.22)">
     <!-- Header -->
     <div style="padding:14px 18px 10px;border-bottom:1px solid #e6e6e6;display:flex;justify-content:space-between;align-items:flex-start">
